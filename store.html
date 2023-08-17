@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+      
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+
+    
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;700&display=swap" rel="stylesheet">
+    
+    <style>
+        body {
+            font-family: 'Montserrat', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #572c57;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        .class {
+            background-color: #fff;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+            
+        }
+
+        /* Highlight on hover */
+        .class:hover {
+            background-color: #78adfb; /* Change to the desired highlight color */
+            border-color: #ddd; /* Change to the desired border color */
+            box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.1); /* Add a shadow for depth */
+        }
+
+        .class img {
+            max-width: 150px;
+            margin-right: 20px;
+            border-radius: 8px;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        .class-info {
+            flex: 1;
+        }
+        .class-info h2 {
+            font-size: 24px;
+            margin: 0 0 10px 0;
+            color: #0055fe; /* Change font color */
+        }
+        .class-info p {
+            font-size: 16px;
+            margin: 0 0 10px 0;
+        }
+        .class-info button {
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 16px;
+            transition: background-color 0.3s ease;
+        }
+        .class-info button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+    
+</head>
+
+<head>
+
+    <div class="container">
+        <h1 style="text-align: center; margin-bottom: 40px; color: #0055fe;">Premium Fitness</h1>
+        
+  <title>Navigation Bar</title>
+  <style>
+    /* Reset some default styles */
+    body, ul {
+      margin: 0;
+      padding: 0;
+    }
+    
+    /* Style the navigation bar */
+    .navbar {
+      background-color: #0055fe;
+      overflow: hidden;
+    }
+
+    /* Style the navigation links */
+    .navbar a {
+      float: left;
+      display: block;
+      color: white;
+      text-align: center;
+      padding: 14px 16px;
+      text-decoration: none;
+    }
+
+    /* Change the color of navigation links when you hover over them */
+    .navbar a:hover {
+      background-color: #ddd;
+      color: black;
+    }
+  </style>
+</head>
+<body>
+
+<div class="navbar">
+  <a href="#home">Home</a>
+  <a href="#about">About</a>
+  <a href="#services">Services</a>
+  <a href="#contact">Contact</a>
+</div>
+
+</body>
+</html>
+
+        
+        <!DOCTYPE html>
+        <html>
+        <head>
+          <title>Slideshow Images</title>
+          <style>
+            .slider {
+              width: 100%; /* Adjusted to fill the maximum width */
+              height: 300px;
+              background-color: yellow;
+              text-align: center;
+              overflow: hidden;
+            }
+            .image-container {
+              width: 4500px; /* Adjusted to fit the wider slider */
+              background-color: pink;
+              height: 300px;
+              clear: both;
+              position: relative;
+              -webkit-transition: left 2s;
+              -moz-transition: left 2s;
+              -o-transition: left 2s;
+              transition: left 2s;
+              display: flex;
+            }
+            .slide {
+              flex: 1;
+              height: 100%;
+              background-size: 100% 100%;;
+              background-repeat: no-repeat;
+              background-position: center;
+            }
+            #slide-1:target ~ .image-container {
+              left: 0px;
+            }
+            #slide-2:target ~ .image-container {
+              left: -100%;
+            }
+            #slide-3:target ~ .image-container {
+              left: -200%;
+            }
+            .buttons {
+              position: relative;
+              top: -20px;
+            }
+            .buttons a {
+              display: inline-block;
+              height: 15px;
+              width: 15px;
+              border-radius: 50px;
+              background-color: white;
+            }
+          </style>
+        </head>
+        <body>
+          <div class="slider">
+            <span id="slide-1"></span>
+            <span id="slide-2"></span>
+            <span id="slide-3"></span>
+            <div class="image-container">
+              <div class="slide" style="background-image: url('https://res-1.cloudinary.com/gll/image/upload/c_fit,f_auto,h_391,w_1280/v1562110865/Homepage_Banner_Desktop-Girls_in_fitness_class.jpg');"></div>
+              <div class="slide" style="background-image: url('https://vimfitness.com/wp-content/uploads/2021/02/best-fitness-classes.jpg');"></div>
+              <div class="slide" style="background-image: url('https://3strong.com/wp-content/uploads/2019/02/4-Benefits-of-Joining-Group-Fitness-Classes.jpg');"></div>
+              <div class="slide" style="background-image: url('https://www.polar.com/blog/wp-content/uploads/2017/01/What-is-group-fitness_hero.jpg');"></div>
+              <div class="slide" style="background-image: url('https://www.sciencenews.org/wp-content/uploads/2020/05/051920_ed_fitnessclass_feat-1028x579.jpg');"></div>
+              <div class="slide" style="background-image: url('https://sportengland-production-files.s3.eu-west-2.amazonaws.com/s3fs-public/2021-10/TGCClassesMain_0.jpg?VersionId=7Ml4cwagpqIEmjuLnb4nCS7H9s4Gw38J');"></div>
+              <div class="slide" style="background-image: url('https://hips.hearstapps.com/hmg-prod/images/solace-1525876940.jpg');"></div>
+            </div>
+            <div class="buttons">
+              <a href="#slide-1"></a>
+              <a href="#slide-2"></a>
+              <a href="#slide-3"></a>
+            </div>
+          </div>
+        </body>
+        </html>
+
+
+        <!DOCTYPE html>
+        <html lang="en">
+        <head>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;700&display=swap" rel="stylesheet">
+            <style>
+                body {
+                    font-family: 'Montserrat', sans-serif;
+                    margin: 0;
+                    padding: 0;
+                    background-color: #f5f5f5;
+                }
+                .container {
+                    max-width: 1200px;
+                    margin: 0 auto;
+                    padding: 20px;
+                }
+                /* ... Your other styles ... */
+        
+                /* Feature pointers */
+                .feature-pointers {
+                    display: flex;
+                    justify-content: space-between;
+                    margin-top: 40px;
+                }
+                .feature {
+                    flex: 1;
+                    text-align: center;
+                    padding: 20px;
+                    background-color: #fff;
+                    border-radius: 10px;
+                    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+                    margin: 0 10px;
+                    animation: pulsate 2s infinite; /* Add pulsating animation */
+                }
+                /* ... Footer styles ... */
+        
+                /* Keyframes for pulsating animation */
+                @keyframes pulsate {
+                    0%, 100% {
+                        transform: scale(1);
+                    }
+                    50% {
+                        transform: scale(1.1);
+                    }
+                }
+            </style>
+            <!-- Add Font Awesome -->
+            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+        </head>
+        <body>
+            <div class="container">
+                <!-- Your content here -->
+                <div class="feature-pointers">
+                    <div class="feature">
+                        <div class="feature-icon"><i class="fas fa-users"></i></div>
+                        <div class="feature-title">Guides and Community</div>
+                        <div class="feature-description">Join our community and get access to expert guides for your fitness journey.</div>
+                    </div>
+                    <div class="feature">
+                        <div class="feature-icon"><i class="fas fa-dumbbell"></i></div>
+                        <div class="feature-title">Daily Workouts</div>
+                        <div class="feature-description">Get your daily dose of workouts designed to help you achieve your fitness goals.</div>
+                    </div>
+                    <div class="feature">
+                        <div class="feature-icon"><i class="fas fa-calendar-times"></i></div>
+                        <div class="feature-title">Cancel Anytime</div>
+                        <div class="feature-description">No commitments. Cancel your membership anytime you want.</div>
+                    </div>
+                </div>
+            </div>
+            <!-- ... Your footer ... -->
+        </body>
+        </html>
+        
+        
+        
+
+        
+
+<br>
+<br>
+<br>
+        
+
+        <div class="class">
+            <img src="https://titleboxingclub.com/wp-content/uploads/2022/07/Boxing_Rounds.jpg" alt="Boxing Class">
+            <div class="class-info">
+                <h2>Boxing Class</h2>
+                <p>Join our intense boxing class to improve your strength and agility.</p>
+                <p>Price: $20 per session</p>
+                <button>Book Now</button>
+            </div>
+        </div>
+        <div class="class">
+            <img src="https://hips.hearstapps.com/hmg-prod/images/female-instructor-with-yoga-class-in-the-gym-royalty-free-image-700718696-1561407106.jpg" alt="Yoga Class">
+            <div class="class-info">
+                <h2>Yoga Class</h2>
+                <p>Relax and find balance with our invigorating yoga sessions.</p>
+                <p>Price: $18 per session</p>
+                <button>Book Now</button>
+            </div>
+        </div>
+        <div class="class">
+            <img src="https://blog.classpass.com/wp-content/uploads/2022/09/Cycling-2-scaled.jpeg" alt="Spin Class">
+            <div class="class-info">
+                <h2>Spin Class</h2>
+                <p>Experience an intense cardiovascular workout with our dynamic spin sessions.</p>
+                <p>Price: $25 per session</p>
+                <button>Book Now</button>
+            </div>
+        </div>
+        <div class="class">
+            <img src="https://assets.hvmag.com/2023/05/yJvWjcd5-Pilates-Studios-Hudson-Valley.jpg" alt="Pilates Class">
+            <div class="class-info">
+                <h2>Pilates Class</h2>
+                <p>Strengthen your core and enhance flexibility through our premium Pilates sessions.</p>
+                <p>Price: $22 per session</p>
+                <button>Book Now</button>
+            </div>
+        </div>
+        <div class="class">
+            <img src="https://www.fitnessfirst.com.sg/-/media/project/evolution-wellness/fitness-first/south-east-asia/malaysia/classes/fgt-hiit/fgt-hiit_fb-sharing.png" alt="HIIT Class">
+            <div class="class-info">
+                <h2>HIIT Class</h2>
+                <p>Experience high-intensity interval training for maximum results.</p>
+                <p>Price: $28 per session</p>
+                <button>Book Now</button>
+            </div>
+        </div>
+        <div class="class">
+            <img src="https://yokkao.com/cdn/shop/articles/yokkao_yodchai.jpg?v=1592312020" alt="Muay Thai Class">
+            <div class="class-info">
+                <h2>Muay Thai Class</h2>
+                <p>Master the art of Muay Thai with our expert instructors.</p>
+                <p>Price: $30 per session</p>
+                <button>Book Now</button>
+            </div>
+        </div>
+    </div>
+
+
+        
+</body>
+</html>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Montserrat', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f5f5f5;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        /* ... Your other styles ... */
+
+        /* Footer styles */
+        .footer {
+            background-color: #333;
+            color: white;
+            padding: 40px 0;
+            text-align: center;
+        }
+        .footer-logo {
+            font-size: 32px;
+            font-weight: 700;
+            margin-bottom: 10px;
+        }
+        .footer-links {
+            margin-top: 20px;
+        }
+        .footer-links a {
+            color: white;
+            text-decoration: none;
+            margin: 0 15px;
+        }
+        .footer-social-icons {
+            margin-top: 30px;
+        }
+        .footer-social-icons a {
+            color: white;
+            font-size: 24px;
+            margin: 0 15px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Your content here -->
+    </div>
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-logo">Premium Fitness</div>
+        <div class="footer-links">
+            <a href="#home">Home</a>
+            <a href="#about">About</a>
+            <a href="#services">Services</a>
+            <a href="#contact">Contact</a>
+        </div>
+        <div class="footer-social-icons">
+            <a href="#"><i class="fab fa-facebook"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-linkedin"></i></a>
+        </div>
+        <p>&copy; 2023 Premium Fitness. All rights reserved.</p>
+    </footer>
+</body>
+</html>
+
