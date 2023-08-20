@@ -5,8 +5,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
-
-    
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;700&display=swap" rel="stylesheet">
     
     <style>
@@ -35,9 +33,10 @@
 
         /* Highlight on hover */
         .class:hover {
-            background-color: #78adfb; /* Change to the desired highlight color */
-            border-color: #ddd; /* Change to the desired border color */
-            box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.1); /* Add a shadow for depth */
+            transform: translateY(-20px);
+            box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.1);
+            background-color: #78adfb;
+            border-color: #ddd;
         }
 
         .class img {
@@ -77,8 +76,9 @@
 
 <head>
 
+    <header class="header"></header>
+    
     <div class="container">
-        <h1 style="text-align: center; margin-bottom: 40px; color: #0055fe;">Premium Fitness</h1>
         
   <title>Navigation Bar</title>
   <style>
@@ -109,15 +109,112 @@
       background-color: #ddd;
       color: black;
     }
+
+    .cart-icon {
+    font-size: 20px;
+    color: white;
+    margin-left: auto;
+    }
+
+    .header {
+    background-image: url('https://bitmovin.com/wp-content/uploads/2022/06/classpass-header.jpg');
+    background-size: contain; /* Adjust the background image size */
+    background-position: center top; /* Adjust the background image position */
+    height: 300px; /* Set the desired height of your header */
+    color: white; /* Set text color to be visible on the image */
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    }
+    /*popup*/
+
+    .popup {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    justify-content: center;
+    align-items: center;
+    z-index: 999;
+}
+
+.popup-content {
+    background-color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            text-align: center;
+            position: relative;
+            max-width: 400px; /* Limit the width of the popup */
+            margin: 0 auto; /* Center horizontally */
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.close-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+form {
+    margin-top: 20px;
+}
+
+input[type="email"] {
+    padding: 10px;
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+button[type="submit"] {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button[type="submit"]:hover {
+    background-color: #0056b3;
+}
+
+
   </style>
 </head>
 <body>
+
+    <script>
+
+document.addEventListener("DOMContentLoaded", function() {
+    const openBtn = document.getElementById("open-btn");
+    const popup = document.getElementById("popup");
+    const closeBtn = document.getElementById("close-btn");
+
+    openBtn.addEventListener("click", function() {
+        popup.style.display = "flex";
+    });
+
+    closeBtn.addEventListener("click", function() {
+        popup.style.display = "none";
+    });
+});
+
+    </script>
 
 <div class="navbar">
   <a href="#home">Home</a>
   <a href="#about">About</a>
   <a href="#services">Services</a>
   <a href="#contact">Contact</a>
+  <a href="#"><i class="fas fa-shopping-cart cart-icon"></i></a>
 </div>
 
 </body>
@@ -167,6 +264,7 @@
             .buttons {
               position: relative;
               top: -20px;
+              
             }
             .buttons a {
               display: inline-block;
@@ -177,6 +275,7 @@
             }
           </style>
         </head>
+
         <body>
           <div class="slider">
             <span id="slide-1"></span>
@@ -196,7 +295,11 @@
               <a href="#slide-2"></a>
               <a href="#slide-3"></a>
             </div>
+
+        
           </div>
+
+
         </body>
         </html>
 
@@ -245,7 +348,7 @@
                         transform: scale(1);
                     }
                     50% {
-                        transform: scale(1.1);
+                        transform: scale(1.02);
                     }
                 }
             </style>
@@ -258,21 +361,41 @@
                 <div class="feature-pointers">
                     <div class="feature">
                         <div class="feature-icon"><i class="fas fa-users"></i></div>
-                        <div class="feature-title">Guides and Community</div>
+                        <div class="feature-title"><b>Guides and Community</b></div>
+                        <br>
                         <div class="feature-description">Join our community and get access to expert guides for your fitness journey.</div>
                     </div>
                     <div class="feature">
                         <div class="feature-icon"><i class="fas fa-dumbbell"></i></div>
-                        <div class="feature-title">Daily Workouts</div>
+                        <div class="feature-title"><b>Daily Workouts</b></div>
+                        <br>
                         <div class="feature-description">Get your daily dose of workouts designed to help you achieve your fitness goals.</div>
                     </div>
                     <div class="feature">
                         <div class="feature-icon"><i class="fas fa-calendar-times"></i></div>
-                        <div class="feature-title">Cancel Anytime</div>
+                        <div class="feature-title"><b>Cancel Anytime</b></div>
+                        <br>
                         <div class="feature-description">No commitments. Cancel your membership anytime you want.</div>
                     </div>
                 </div>
             </div>
+
+            <div class="popup" id="popup">
+                <div class="popup-content">
+                    <span class="close-btn" id="close-btn">&times;</span>
+                    <h2>Sign Up Now for a Discount!</h2>
+                    <p>Get 10% off your first class when you sign up today.</p>
+                    <form>
+                        <input type="email" placeholder="Enter your email" required>
+                        <button type="submit">Sign Up</button>
+                    </form>
+                </div>
+            </div>
+            <button class="open-btn" id="open-btn">Discount Avaliable!</button>
+            <script src="store.html">
+        
+        
+            </script>
             <!-- ... Your footer ... -->
         </body>
         </html>
@@ -346,6 +469,7 @@
 
         
 </body>
+
 </html>
 
 <!DOCTYPE html>
@@ -421,4 +545,6 @@
     </footer>
 </body>
 </html>
+
+
 
